@@ -184,6 +184,28 @@ a:hover {
   color: blue;
 }
 
+
+.resources {
+  font-size: 1.4rem;
+  margin-bottom: 5rem;
+}
+ul {
+  list-style-type: none;
+  padding:0;
+}
+
+.legend ul {
+  font-size: 1.8rem;
+}
+
+.top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  text-transform: uppercase;
+  cursor: n-resize;
+}
+
 @media (max-width: 600px) {
   html {
     font-size: 50%;
