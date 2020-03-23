@@ -78,6 +78,8 @@ main {
     main section.resources ul {
       list-style-type: none;
       padding: 0; }
+      main section.resources ul li:last-of-type {
+        margin-top: .5rem; }
   main a {
     transition: color .125s ease-in-out; }
     main a:link, main a:visited {
