@@ -95,6 +95,9 @@ h2 {
   font-weight: normal;
   color: rgb(17, 11, 0);
 }
+h3 {
+  font-size: 1.6rem;
+}
 
 ol {
   margin-top: 2rem;
