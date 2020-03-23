@@ -1,0 +1,272 @@
+
+@font-face {
+  font-family: 'Almendra';
+  src: url('fonts/AlmendraDisplay-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Andada';
+  src: url('fonts/Andada-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bitter';
+  src: url('fonts/Bitter-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bitter';
+  src: url('fonts/Bitter-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Bitter';
+  src: url('fonts/Bitter-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+:root {
+  --bg-color: rgba(231, 210, 168, 1);
+  --bg-color-fade : rgba(231, 210, 168, 0);
+  --highlight: green;
+}
+
+html {
+  font-size: 62.5%;
+  background: var(--bg-color);
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 3rem 1fr .25fr;
+  font-family: "Bitter";
+}
+
+.rotate-90 {
+  display: inline-block;
+  transform: rotateZ(90deg);
+  margin-left: 1rem;
+}
+
+.crossed {
+  text-decoration: line-through;
+}
+
+.top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  text-transform: uppercase;
+  cursor: n-resize;
+}
+
+main {
+  grid-column: 2;
+  margin-top: 1.5rem;
+
+  section dl:last-of-type {
+    margin-bottom: 3rem;
+  }
+
+  section.legend {
+    ul {
+      list-style-type: none;
+      padding:0;
+      font-size: 1.8rem;
+    }
+  }
+
+  section.care {
+    ol li {
+      margin-bottom: 0;
+
+      &:last-of-type {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  section.bread {
+    ol li {
+      margin-bottom: 3rem;
+    }
+
+    ol li ul {
+      margin-top: 1.5rem;
+    }
+
+    ul.notes {
+      font-size: 1.2rem;
+      list-stye-type: dot;
+      padding: 0 0 0 1.5rem;
+
+      li {
+        margin-bottom: .5rem;
+      }
+    }
+  }
+
+  section.resources {
+    font-size: 1.4rem;
+    margin-bottom: 5rem;
+
+    ul {
+      list-style-type: none;
+      padding:0;
+    }
+  }
+
+  a {
+    transition: color .125s ease-in-out;
+
+    &:link, &:visited {
+      color: rgb(199, 105, 19);
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: blue;
+    }
+  }
+
+  hr {
+    border: none;
+    height: 2rem;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 10rem;
+      background: linear-gradient(90deg, var(--bg-color), var(--bg-color-fade));
+      position: absolute;
+      left: 0;
+      top:0;
+      z-index: 10;
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 10rem;
+      background: linear-gradient(90deg, var(--bg-color-fade), var(--bg-color));
+      position: absolute;
+      right: 0;
+      top:0;
+      z-index: 10;
+    }
+
+    svg {
+      width: 100%;
+
+      line {
+        stroke: rgb(240, 146, 48);
+      }
+    }
+  }
+
+  h1 {
+    font-family: 'Almendra';
+    font-size: 4.8rem;
+    letter-spacing: 1rem;
+    margin: 0 0 1.5rem 0;
+  }
+
+  h2 {
+    font-family: 'Andada';
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: rgb(17, 11, 0);
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  ol {
+    margin-top: 2rem;
+
+    li {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+
+    img {
+      width: 80%;
+      max-width: 25rem;
+      margin: 1.5rem auto;
+      margin-bottom: 3rem;
+    }
+  }
+
+  mark {
+    color: var(--highlight);
+    background: none;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: solid 1px;
+    width: 32.5rem;
+
+    dt, dd {
+      cursor: pointer;
+    }
+
+    dt {
+        border-right: solid 1px;
+        border-bottom: solid 1px;
+        padding: 1rem;
+
+        &.span {
+          grid-column: 1 / span 2;
+          border-right: none;
+        }
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+    }
+
+    dd {
+      border-bottom: solid 1px;
+      border-color: black;
+      margin: 0;
+      padding: 1rem;
+      color: var(--highlight);
+      display: flex;
+      align-items: center;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+  body {
+    grid-template-columns: 10vw 1fr 10vw;
+  }
+
+  ol {
+    padding: 0;
+  }
+  ul {
+    padding: 0;
+  }
+}
