@@ -189,7 +189,7 @@ a:hover {
   font-size: 1.4rem;
   margin-bottom: 5rem;
 }
-ul {
+.legend ul, .resources ul {
   list-style-type: none;
   padding:0;
 }
@@ -204,6 +204,12 @@ ul {
   right: 1.5rem;
   text-transform: uppercase;
   cursor: n-resize;
+}
+
+.bread ul.notes {
+  font-size: 1.2rem;
+  list-stye-type: dot;
+  padding: 0 0 0 1.5rem;
 }
 
 @media (max-width: 600px) {
