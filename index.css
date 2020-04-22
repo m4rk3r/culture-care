@@ -72,6 +72,16 @@ main {
     padding: 0 0 0 1.5rem; }
     main section.bread ul.notes li {
       margin-bottom: .5rem; }
+  main section.focaccia h2 {
+    margin-top: 0; }
+  main section.focaccia ul.images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: .5rem;
+    list-style-type: none;
+    padding: 0; }
+    main section.focaccia ul.images li img {
+      width: 100%; }
   main section.resources {
     font-size: 1.4rem;
     margin-bottom: 5rem; }
@@ -90,7 +100,8 @@ main {
   main hr {
     border: none;
     height: 2rem;
-    position: relative; }
+    position: relative;
+    margin: 1.5rem 0; }
     main hr:before {
       content: '';
       display: block;
